@@ -1,0 +1,39 @@
+<div class="my-3 mx-3">
+    <h2>toArray</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>toArray:</b> A transformation operator that collects all the emitted values from the source Observable
+            and delivers them as a single array when the source completes.<br>
+            Useful when you want to wait for the entire stream to finish and then work with the collected values at
+            once.<br>
+            <b>Example:</b> <code>of(1, 2, 3, 4).pipe(toArray())</code> → emits <code>[1, 2, 3, 4]</code>.
+        </p>
+    </div>
+    <br>
+    <strong>Examples</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Data : </strong>From Observable(interval) to Array
+            </p>
+            <hr>
+            <p style="text-align: center;">[ {{convertedArray}} ]</p>
+        </div>
+        <div class="col-md-4">
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Data : </strong>From Observable(array) to Array
+            </p>
+            <hr>
+            <p style="text-align: center;">[ {{convertedArray1}} ]</p>
+        </div>
+        <div class="col-md-4">
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Data : </strong>From Observable(random data) to Array
+            </p>
+            <hr>
+            <p style="text-align: center;">[ {{convertedArray2}} ]</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,142 @@
+<app-toast [message]="message" [user]="user_name"></app-toast>
+<div class="signup-container">
+    <h2 class="signup-title">Create Account</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" placeholder="First Name" formControlName="firstName" />
+                <div
+                    *ngIf="signupForm.get('firstName')?.invalid && (signupForm.get('firstName')?.touched || isSubmitted)">
+                    <small class="text-danger" *ngIf="signupForm.get('firstName')?.errors?.['required']">First
+                        Name is required</small>
+                    <small class="text-danger" *ngIf="signupForm.get('firstName')?.errors?.['minlength']">Minimum 3
+                        character
+                        required</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Last Name" formControlName="lastName" />
+                <div
+                    *ngIf="signupForm.get('lastName')?.invalid && (signupForm.get('lastName')?.touched || isSubmitted)">
+                    <small class="text-danger" *ngIf="signupForm.get('lastName')?.errors?.['required']">Last Name is
+                        required</small>
+                    <small class="text-danger" *ngIf="signupForm.get('lastName')?.errors?.['minlength']">Minimum 3
+                        character
+                        required</small>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email" formControlName="email" />
+            <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('email')?.errors?.['required']">Email is
+                    required</small>
+                <small class="text-danger" *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email
+                    format</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Phone Number" formControlName="phoneNumber" />
+            <div
+                *ngIf="signupForm.get('phoneNumber')?.invalid && (signupForm.get('phoneNumber')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('phoneNumber')?.errors?.['required']">Phone Number is
+                    required
+                </small>
+                <small class="text-danger" *ngIf="signupForm.get('phoneNumber')?.errors?.['minlength']">Minimum 10
+                    number required
+                </small>
+                <small class="text-danger" *ngIf="signupForm.get('phoneNumber')?.errors?.['maxlength']">Maximum 10
+                    number only
+                </small>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" placeholder="Username" formControlName="username" />
+                <div
+                    *ngIf="signupForm.get('username')?.invalid && (signupForm.get('username')?.touched || isSubmitted)">
+                    <small class="text-danger" *ngIf="signupForm.get('username')?.errors?.['required']">Username is
+                        required
+                    </small>
+                    <small class="text-danger" *ngIf="signupForm.get('username')?.errors?.['minlength']">Minimum 5
+                        character required
+                    </small>
+                    <small class="text-danger" *ngIf="signupForm.get('username')?.errors?.['usernameValidator']">
+                        Username must contain at least one uppercase letter, one lowercase letter, one number
+                    </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <select formControlName="accountType">
+                    <option value="" disabled selected>Select Account Type</option>
+                    <option value="admin">Admin</option>
+                    <option value="superadmin">Superadmin</option>
+                    <option value="other">Other</option>
+                </select>
+                <div
+                    *ngIf="signupForm.get('accountType')?.invalid && (signupForm.get('accountType')?.touched || isSubmitted)">
+                    <small class="text-danger" *ngIf="signupForm.get('accountType')?.errors?.['required']">Account Type
+                        is required</small>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Gender:</label>
+            <div class="gender-options">
+                <input type="radio" id="gender-male" formControlName="gender" value="male" />
+                <label for="gender-male">Male</label>
+                <input type="radio" id="gender-female" formControlName="gender" value="female" />
+                <label for="gender-female">Female</label>
+                <input type="radio" id="gender-other" formControlName="gender" value="other" />
+                <label for="gender-other">Other</label>
+            </div>
+            <div *ngIf="signupForm.get('gender')?.invalid && (signupForm.get('gender')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('gender')?.errors?.['required']">Gender is
+                    required</small>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Password" formControlName="password" />
+            <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('password')?.errors?.['required']">Password is
+                    required
+                </small>
+                <small class="text-danger" *ngIf="signupForm.get('password')?.errors?.['minlength']">Minimum 6 character
+                    required
+                </small>
+                <small class="text-danger" *ngIf="signupForm.get('password')?.errors?.['passwordValidator']">
+                    Password must contain at least one uppercase letter, one lowercase letter, one number, and one
+                    special character
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" />
+            <div
+                *ngIf="signupForm.get('confirmPassword')?.invalid && (signupForm.get('confirmPassword')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('confirmPassword')?.errors?.['required']">Confirm
+                    Password is required
+                </small>
+                <small class="text-danger" *ngIf="signupForm.get('confirmPassword')?.errors?.['mustMatch']">
+                    Passwords do not match
+                </small>
+            </div>
+        </div>
+        <div class="form-group terms">
+            <label>
+                <input type="checkbox" formControlName="acceptTerms" />
+                I agree to the <a routerLink="/terms">Terms and Conditions</a>
+            </label>
+            <div class="text-danger"
+                *ngIf="signupForm.get('acceptTerms')?.invalid && (signupForm.get('acceptTerms')?.touched || isSubmitted)">
+                <small class="text-danger" *ngIf="signupForm.get('acceptTerms')?.errors?.['required']">Please select
+                    Terms and Conditions</small>
+            </div>
+        </div>
+        <button type="submit" class="signup-btn">Sign Up</button>
+        {{signupForm.get('confirmPassword')?.errors | json}}
+    </form>
+    <div class="links" style="text-align:center; margin-top:16px;">
+        <a routerLink="/login">Have account? Log In</a>
+    </div>
+</div>

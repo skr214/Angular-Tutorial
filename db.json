@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "firstName": "Test",
+      "lastName": "Test",
+      "email": "test@example.com",
+      "phoneNumber": "1234567890",
+      "username": "1234Test",
+      "accountType": "admin",
+      "gender": "male",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": "1"
+    },
+    {
+      "id": "6ed2",
+      "firstName": "Smruti",
+      "lastName": "Sahoo",
+      "email": "ss@gmail.com",
+      "phoneNumber": 8723451287,
+      "username": "sahoo.smruti",
+      "accountType": "admin",
+      "gender": "female",
+      "password": "Cvrce@123",
+      "confirmPassword": "Cvrce@123",
+      "acceptTerms": true
+    },
+    {
+      "firstName": "sonu",
+      "lastName": "sahoo",
+      "email": "sahoo@rai.com",
+      "phoneNumber": 57892309643,
+      "username": "ss12345",
+      "accountType": "other",
+      "gender": "female",
+      "password": "Ara@123",
+      "confirmPassword": "Ara@123",
+      "id": "dd55"
+    },
+    {
+      "id": "73a2",
+      "firstName": "Monu",
+      "lastName": "Kumar",
+      "email": "mk@gmail.com",
+      "phoneNumber": 8642345678,
+      "username": "mk@84",
+      "accountType": "admin",
+      "gender": "male",
+      "password": "monu@123",
+      "confirmPassword": "Monu2123",
+      "acceptTerms": true
+    },
+    {
+      "firstName": "son",
+      "lastName": "kum",
+      "email": "s@gmail.com",
+      "phoneNumber": 87655354,
+      "username": "jjgf099",
+      "accountType": "admin",
+      "gender": "other",
+      "password": "yihgkjkj",
+      "confirmPassword": "ihihihu",
+      "id": "5a8c"
+    },
+    {
+      "firstName": "SKR",
+      "lastName": "MKR",
+      "email": "s@gmail.com",
+      "phoneNumber": 765435677654,
+      "username": "22345678875",
+      "accountType": "admin",
+      "gender": "female",
+      "password": "iuyfds354",
+      "confirmPassword": "nhgfds354",
+      "id": "b93e"
+    }
+  ]
+}

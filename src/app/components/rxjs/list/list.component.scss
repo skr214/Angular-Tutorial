@@ -1,0 +1,29 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card:hover {
+    background: #e8f0fe;
+    border-color: #90caf9;
+}

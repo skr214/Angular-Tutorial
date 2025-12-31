@@ -1,0 +1,28 @@
+<app-toast [message]="message" [user]="users[0]?.firstName"></app-toast>
+<div class="login-container">
+    <div class="login-card">
+        <h2 class="title">Login</h2>
+
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <!-- User Id / Email -->
+            <div class="form-group">
+                <input type="text" placeholder="User ID / Email" name="userId" [ngModel]="null" required />
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <input type="password" placeholder="Password" name="password" [ngModel]="null" required />
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit" class="login-btn" data-bs-target="#exampleModal">Login</button>
+        </form>
+
+        <!-- Links -->
+        <div class="links">
+            <a routerLink="/forgot-password">Forgot Password?</a>
+            <span>|</span>
+            <a routerLink="/signup">Don't have an account? Sign Up</a>
+        </div>
+    </div>
+</div>

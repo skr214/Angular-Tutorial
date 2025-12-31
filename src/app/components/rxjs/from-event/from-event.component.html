@@ -1,0 +1,41 @@
+<div class="my-3 mx-3">
+    <h2>From Event</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            The fromEvent operator creates an Observable that listens to a specific event (like a button click, key
+            press, or mouse move) on a target (like a DOM element, document, or window).
+            Each time that event happens, it emits the event object to all subscribers.
+            This makes it easy to handle user interactions in a clean, reactive way instead of adding and removing event
+            listeners manually.
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"> Add Videos </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-3">Click the button to see the event object</h5>
+                    <button class="btn btn-primary" #addBtn>ADD</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"> Add Videos </div>
+                <div class="card-body">
+                    <ul id="container"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header"> Add Videos </div>
+                <div class="card-body">
+                    <ul id="container1"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

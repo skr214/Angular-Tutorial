@@ -1,0 +1,137 @@
+.signup-container {
+  max-width: 456px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(120, 63, 255, 0.08);
+
+  .signup-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #7c3aed;
+    margin-bottom: 28px;
+    letter-spacing: 1px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 14px;
+
+    .form-group {
+      flex: 1;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.2s;
+      outline: none;
+
+      &:focus {
+        border-color: #7c3aed;
+      }
+    }
+  }
+
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #444;
+  }
+
+  .gender-options {
+    display: flex;
+    gap: 18px;
+    label {
+      font-size: 15px;
+      color: #555;
+      input[type="radio"] {
+        margin-right: 6px;
+        accent-color: #7c3aed;
+      }
+    }
+  }
+
+  .signup-btn {
+    padding: 12px;
+    background: linear-gradient(90deg, #7c3aed 60%, #a78bfa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      background: linear-gradient(90deg, #6d28d9 60%, #a78bfa 100%);
+      box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+    }
+  }
+
+  .terms {
+    margin-top: 10px;
+    label {
+      font-size: 15px;
+      color: #555;
+      a {
+        color: #7c3aed;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .links {
+    text-align: center;
+    margin-top: 16px;
+
+    a {
+      color: #7c3aed;
+      font-weight: 500;
+      text-decoration: underline;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #6d28d9;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 600px) {
+    padding: 18px 8px;
+    max-width: 98vw;
+
+    .signup-title {
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .signup-btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+}
