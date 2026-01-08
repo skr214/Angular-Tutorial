@@ -1,1 +1,44 @@
-<p>custom-observable works!</p>
+<div class="my-3 mx-3">
+    <h2>Custom Observable</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            A Custom Observable is an observable that is manually created using the Observable constructor in RxJS,
+            where the
+            developer defines how and when data is produced, how errors are handled, and when the stream is completed.
+
+            Custom Observables are useful when you need to create a data stream that doesn't fit the typical patterns
+            provided by
+            RxJS's built-in operators.
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <strong> Ex - 01 (Manual) </strong>
+            <hr>
+            <ul id="container" class="techList"
+                [ngClass]="obsStatusManual==='complete'?'success':obsStatusManual==='error'?'error':''"></ul>
+        </div>
+        <div class="col-md-6">
+            <strong> Ex - 02 (Custom Interval Observable) </strong>
+            <hr>
+            <ul id="container2" class="techList"
+                [ngClass]="obsStatus==='complete'?'success':obsStatus==='error'?'error':''"></ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <strong> Ex - 03 (Random Names) </strong>
+            <br>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Random Names : </strong>'Sonu', 'Monu', 'Ravi', 'Anu', 'Manu', 'Tina', 'Sana', 'Lina'
+            </p>
+            <hr>
+            <p>Current Name : <strong class="text-success">{{currentName }}</strong></p>
+            <span
+                [ngClass]="obsStatusRandom==='complete'?'badge bg-success':obsStatusRandom==='error'?'badge bg-danger':'badge text-bg-primary'">{{obsStatusRandom==='complete'?'Success':obsStatusRandom==='error'?'Error':'Pending'}}</span>
+        </div>
+    </div>
+</div>

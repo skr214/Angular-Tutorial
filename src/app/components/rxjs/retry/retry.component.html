@@ -1,0 +1,59 @@
+<div class="my-3 mx-3">
+    <h2>Retry, RetryWhen, scan and Delay</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>retry:</b> Resubscribes to the source Observable a specified number of times in case of an error. Useful
+            for
+            handling transient errors.<br>
+            <b>Example:</b> <code>source$.pipe(retry(3))</code> → retries the source Observable up to 3 times on
+            error.<br><br>
+            <b>retryWhen:</b> Allows customizing the retry logic by providing a notifier Observable. Useful for more
+            complex
+            retry scenarios.<br>
+            <b>Example:</b> <code>source$.pipe(retryWhen(errors => errors.pipe(delay(1000))))</code> → retries after 1
+            second delay on error.<br><br>
+            <b>scan:</b> Applies an accumulator function over the source Observable, returning the accumulated result.
+            Useful for
+            maintaining state.<br>
+            <b>Example:</b> <code>source$.pipe(scan((acc, curr) => acc + curr, 0))</code> → sums emitted values.<br><br>
+            <b>delay:</b> Delays the emissions of the source Observable by a specified timeout. Useful for throttling or
+            debouncing.<br>
+            <b>Example:</b> <code>source$.pipe(delay(1000))</code> → delays emissions by 1 second.
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="py-2 px-2">
+                <strong>Ex - 01 | retry </strong>
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userData">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <p class="py-2 px-2">
+                <strong>Ex - 02 | takeLast(n) </strong>
+            </p>
+            <hr>
+            <ul id="container2"></ul>
+        </div>
+    </div>
+</div>

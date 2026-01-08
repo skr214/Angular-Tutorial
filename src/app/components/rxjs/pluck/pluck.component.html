@@ -1,0 +1,56 @@
+<div class="my-3 mx-3">
+    <h2>Pluck</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>pluck:</b> pluck is used to extract a specific property from the emitted objects of an observable.<br>
+            <b>Example:</b>
+            <code>
+            from([&#123;id: 1&#125;, &#123;id: 2&#125;, &#123;id: 3&#125;, &#123;id: 4&#125;]).pipe(pluck('id'))
+            </code>→ emits <code>1, 2, 3, 4</code>(each value emitted separately).
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <strong> Ex - 01 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Pluck : </strong> by properties
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let userName of nameList">
+                        <td>{{ userName }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <strong> Ex - 02 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Pluck : </strong>by nested properties
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Address > City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let userCity of cityList">
+                        <td>{{ userCity }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

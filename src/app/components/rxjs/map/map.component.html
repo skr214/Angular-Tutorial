@@ -1,0 +1,41 @@
+<div class="my-3 mx-3">
+    <h2>map</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>map:</b> map is used to transform the data emitted by an observable without changing the original
+            observable.<br>
+            <b>Example:</b> <code>of(1, 2, 3, 4).pipe(map(x => x * 2))</code> → emits <code>[2, 4, 6, 8]</code>.
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <strong> Ex - 01 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Map : </strong> 'Video'+ data
+            </p>
+            <br>
+            <p>Message <span class="text-success">{{ msg1 }}</span></p>
+        </div>
+        <div class="col-md-4">
+            <strong> Ex - 02 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Map : </strong>data => data * 10
+            </p>
+            <br>
+            <p>Data : <span class="text-success">{{ msg2 }}</span></p>
+        </div>
+        <div class="col-md-4">
+            <strong> Ex - 03 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Map : </strong>Map Object Data
+            </p>
+            <br>
+            <ul id="elContainer"></ul>
+        </div>
+    </div>
+</div>

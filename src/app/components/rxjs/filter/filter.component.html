@@ -1,0 +1,84 @@
+<div class="my-3 mx-3">
+    <h2>Filter</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>filter:</b> filter checks each emitted value and forwards only those that meet the given condition.<br>
+            <b>Example:</b>
+            <code>
+            from([&#123;id: 1&#125;, &#123;id: 2&#125;, &#123;id: 3&#125;, &#123;id: 4&#125;]).pipe(filter(item => item.id > 2))
+            </code>→ emits <code>&#123;id: 3&#125;, &#123;id: 4&#125;</code>.
+        </p>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <strong> Ex - 01 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Filter : </strong> by length
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of filterUsersByLength">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong> Ex - 02 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Filter : </strong>by gender
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of filterUsersByGender">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.gender }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <strong> Ex - 03 </strong>
+            <hr>
+            <p class="bg-light py-2 px-2 border rounded">
+                <strong>Filter : </strong>by nth item
+            </p>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of filterUsersByNthItem">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

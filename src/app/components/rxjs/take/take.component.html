@@ -1,0 +1,50 @@
+<div class="my-3 mx-3">
+    <h2>Take, TakeLast and TakeUntil</h2>
+    <br>
+    <div class="definition-card">
+        <p>
+            <b>take:</b> Emits only the first n values from the source Observable and then completes. Useful to limit
+            emissions.<br>
+            <b>Example:</b> <code>source$.pipe(take(3))</code> → emits first 3 values, then completes.<br><br>
+            <b>takeLast:</b> Waits for the source to complete and then emits only the last n values. Requires source
+            completion.<br>
+            <b>Example:</b> <code>source$.pipe(takeLast(2))</code> → after completion emits the last 2 values.<br><br>
+            <b>takeUntil:</b> Emits values from the source until a notifier Observable emits, then completes — useful to
+            cancel streams (e.g., on destroy or timeout).<br>
+            <b>Example:</b> <code>source$.pipe(takeUntil(stop$))</code> or
+            <code>source$.pipe(takeUntil(timer(3000)))</code>.
+        </p>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="bg-light py-2 px-2 border rounded">
+                Random Names : 'Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank', 'Grace', 'Heidi', 'Ivan', 'Judy'
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="py-2 px-2">
+                <strong>Ex - 01 | take(n) </strong>
+            </p>
+            <hr>
+            <ul id="container1"></ul>
+        </div>
+        <div class="col-md-4">
+            <p class="py-2 px-2">
+                <strong>Ex - 02 | takeLast(n) </strong>
+            </p>
+            <hr>
+            <ul id="container2"></ul>
+        </div>
+        <div class="col-md-4">
+            <p class="py-2 px-2">
+                <strong>Ex - 03 | takeUntil(condition) </strong>
+            </p>
+            <hr>
+            <ul id="container3"></ul>
+        </div>
+    </div>
+</div>
